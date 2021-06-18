@@ -1,5 +1,8 @@
 #include <stdio.h>
 #include <string.h>
+/**
+ *This function prints a text
+ */
 int main(void)
 {
 	char *a = "\"Programming is like building a multilingual puzzle";
