@@ -12,9 +12,14 @@ int main(void)
 	while (ch < 123)
 	{
 		if (ch == 'e' || ch == 'q')
+		{
 			ch++;
+		}
 		else
-			putchar(ch);
+		{
+		putchar(ch);
+		ch++;
+		}
 	}
 	putchar('\n');
 	return (0);
