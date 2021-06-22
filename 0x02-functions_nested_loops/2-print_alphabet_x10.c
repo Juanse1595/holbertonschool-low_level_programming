@@ -23,6 +23,4 @@ void print_alphabet_x10(void)
 		letter = 'a';
 		_putchar('\n');
 	}
-
-	return;
 }
