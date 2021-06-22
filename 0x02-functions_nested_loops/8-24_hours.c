@@ -9,13 +9,13 @@ void jack_bauer(void)
 {
 	int num1 = '0', num2 = '0', num3 = '0', num4 = '0';
 
-	while (num1 < '2')
+	while (num1 <= '2')
 	{
-		while (num2 < '3')
+		while (num2 <= '9')
 		{
-			while (num3 < '5')
+			while (num3 <= '5')
 			{
-				while (num4 < '9')
+				while (num4 <= '9')
 				{
 					_putchar(num1);
 					_putchar(num2);
@@ -23,12 +23,17 @@ void jack_bauer(void)
 					_putchar(num3);
 					_putchar(num4);
 					_putchar('\n');
-					num4++
+					num4++;
 				}
 				num3++;
 				num4 = '0';
 			}
 			num2++;
+			if (num1 == '2' && num2 == '4')
+			{
+				num2 += 10;
+				num1 += 10;
+			}
 			num3 = '0';
 			num4 = '0';
 		}
