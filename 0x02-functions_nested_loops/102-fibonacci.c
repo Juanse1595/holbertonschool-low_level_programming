@@ -22,6 +22,11 @@ void fibonacci(void)
 	printf("\n");
 }
 
+/**
+ * main - Calls fibonacci function
+ * Return: 0
+ */
+
 int main(void)
 {
 	fibonacci();
