@@ -9,11 +9,11 @@ void fibonacci(void)
 	long n1 = 1, n2 = 2, i = 1, sum = 0;
 
 	printf("%ld, %ld, ", n1, n2);
-	while (i <= 50)
+	while (i <= 48)
 	{
 		sum = n1 + n2;
 		printf("%ld", sum);
-		if (i < 50)
+		if (i < 48)
 			printf(", ");
 		n1 = n2;
 		n2 = sum;
