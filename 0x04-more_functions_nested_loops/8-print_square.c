@@ -6,7 +6,7 @@
  * Return: void
  */
 
-void print_square(int size);
+void print_square(int size)
 {
 	int i = 0, j = 0;
 
@@ -16,7 +16,7 @@ void print_square(int size);
 		{
 			while (j < size)
 			{
-				_putchar('#');
+				_putchar(35);
 				j++;
 			}
 			_putchar('\n');
