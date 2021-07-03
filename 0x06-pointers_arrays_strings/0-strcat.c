@@ -1,8 +1,8 @@
 #include "holberton.h"
 /**
  * _strcat - appends one string to another
- * @dest - destiny string
- * @src - source string
+ * @dest: destiny string
+ * @src: source string
  * Return: a pointer to the destiny string
  */
 
