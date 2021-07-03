@@ -1,6 +1,6 @@
 /**
  * leet - Changes some letters for numbers
- * @s - given string
+ * @s: given string
  * Return: a pointer to the changed string
  */
 
