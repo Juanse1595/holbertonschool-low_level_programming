@@ -1,8 +1,9 @@
 #include "holberton.h"
 /**
  * _strncat - appends n bytes of a string to another
- * @dest - destiny string
- * @src - source string
+ * @dest: destiny string
+ * @src: source string
+ * @n: number of bytes
  * Return: a char * pointing to the start of destiny string
  */
 
