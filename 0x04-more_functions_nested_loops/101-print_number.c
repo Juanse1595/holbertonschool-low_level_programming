@@ -13,11 +13,9 @@ void print_number(int n)
 	if (n < 0)
 	{
 		_putchar(45);
-		n = n * -1;
-		aux = aux * -1;
 	}
 
-	while (aux > 9)
+	while (aux > 9 || aux < -9)
 	{
 		aux = aux / 10;
 		i++;
@@ -30,11 +28,17 @@ void print_number(int n)
 			a = a * 10;
 			j++;
 		}
-		_putchar('0' + (n / a));
+		if (n < 0)
+			_putchar('0' + -(n / a));
+		else
+			_putchar('0' + (n / a));
 		i--;
 		n = n % a;
 		j = 0;
 		a = 1;
 	}
-	_putchar('0' + n);
+	if (n < 0)
+		_putchar('0' + -n);
+	else
+		_putchar('0' + n);
 }
