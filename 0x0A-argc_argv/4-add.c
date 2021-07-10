@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <ctype.h>
+#include "holberton.h"
 
 /**
  * main - sums the arguments passed to the function
@@ -18,11 +18,11 @@ int main(int argc, char *argv[])
 	if (argc <= 1)
 	{
 		printf("0\n");
-		return (1);
+		return (0);
 	}
 	for (i = 1; i < argc; i++)
 	{
-		if (isdigit(*argv[i]))
+		if (*argv[i] <= 57 && *argv[i] >= 48)
 			sum = sum + atoi(argv[i]);
 		else
 		{
