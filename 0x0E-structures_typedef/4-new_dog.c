@@ -70,6 +70,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 	if (ownercpy == NULL)
 	{
 		free(ownercpy);
+		free(namecpy);
 		free(p);
 		return (NULL);
 	}
