@@ -19,8 +19,6 @@ int (*get_op_func(char *s))(int, int)
 	};
 	int i;
 
-	if (ops == NULL)
-		return (NULL);
 	i = 0;
 	while (i < 6)
 	{
