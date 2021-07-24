@@ -1,6 +1,7 @@
 #ifndef VAR_H
 #define VAR_H
 #include <stdarg.h>
+#include <stdlib.h>
 
 /**
  * struct t - t has a string to be compaired and a name

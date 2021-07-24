@@ -27,12 +27,12 @@ void print_all(const char * const format, ...)
 	i = 0;
 	sep = "";
 	va_start(argp, format);
-	while (format[i] && format != NULL)
+	while (format && format[i])
 	{
 		j = 0;
-		while (j < 4)
+		while (array[j].a != NULL)
 		{
-			if (format[i] == *array[j].a)
+			if (format[i] == *(array[j].a))
 			{
 				printf("%s", sep);
 				p = array[j].funp;
