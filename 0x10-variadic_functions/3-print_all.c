@@ -30,7 +30,7 @@ void print_all(const char * const format, ...)
 	va_start(argp, format);
 	while (format[i] && format != NULL)
 	{
-		while (array[j].a != NULL)
+		while (j < 4)
 		{
 			if (format[i] == *array[j].a)
 			{
@@ -45,6 +45,7 @@ void print_all(const char * const format, ...)
 		i++;
 	}
 	printf("\n");
+	va_end(argp);
 }
 
 /**
