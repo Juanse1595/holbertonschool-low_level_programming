@@ -25,11 +25,11 @@ void print_all(const char * const format, ...)
 	char *sep;
 
 	i = 0;
-	j = 0;
 	sep = "";
 	va_start(argp, format);
 	while (format[i] && format != NULL)
 	{
+		j = 0;
 		while (j < 4)
 		{
 			if (format[i] == *array[j].a)
@@ -42,7 +42,6 @@ void print_all(const char * const format, ...)
 			}
 			j++;
 		}
-		j = 0;
 		i++;
 	}
 	printf("\n");
