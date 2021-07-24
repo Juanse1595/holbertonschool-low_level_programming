@@ -5,7 +5,7 @@
 typedef struct t
 {
 	char *a;
-	void (*funp)(va_list);
+	void (*funp)();
 } type_t;
 
 int _putchar(char c);
