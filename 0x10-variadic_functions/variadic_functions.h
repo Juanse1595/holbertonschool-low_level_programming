@@ -2,6 +2,13 @@
 #define VAR_H
 #include <stdarg.h>
 
+/**
+ * struct t - t has a string to be compaired and a name
+ * of a function to be redirected
+ * @a: string to be compared
+ * @funp: function to be pointed
+ */
+
 typedef struct t
 {
 	char *a;
