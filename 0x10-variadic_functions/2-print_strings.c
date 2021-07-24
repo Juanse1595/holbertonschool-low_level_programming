@@ -15,6 +15,8 @@ void print_strings(const char *separator, const unsigned int n, ...)
 	char *aux;
 
 	va_start(argp, n);
+	if (n > 0)
+	{
 	if (separator == NULL)
 	{
 		for (i = 0; i < n; i++)
@@ -41,6 +43,7 @@ void print_strings(const char *separator, const unsigned int n, ...)
 			printf("(nil)");
 		else
 			printf("%s", aux);
+	}
 	}
 	printf("\n");
 	va_end(argp);
