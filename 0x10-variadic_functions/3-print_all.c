@@ -23,7 +23,7 @@ void print_all(const char * const format, ...)
 	int i, j;
 	va_list argp;
 	char *sep;
-	
+
 	i = 0;
 	j = 0;
 	sep = "";
