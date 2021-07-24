@@ -22,17 +22,22 @@ void print_all(const char * const format, ...)
 	void (*p)(va_list);
 	int i, j;
 	va_list argp;
-
+	char *sep;
+	
+	i = 0;
+	j = 0;
+	sep = "";
 	va_start(argp, format);
-	while (format[i])
+	while (format[i] && format != NULL)
 	{
 		while (array[j].a != NULL)
 		{
 			if (format[i] == *array[j].a)
 			{
+				printf("%s", sep);
 				p = array[j].funp;
 				p(argp);
-				printf(", ");
+				sep = ", ";
 			}
 			j++;
 		}
@@ -86,5 +91,5 @@ void printstr(va_list argp)
 		printf("(nil)");
 		return;
 	}
-	printf("%s", va_arg(argp, char *));
+	printf("%s", aux);
 }
