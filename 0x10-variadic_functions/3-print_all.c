@@ -38,7 +38,7 @@ void print_all(const char * const format, ...)
 				p = array[j].funp;
 				p(argp);
 				sep = ", ";
-				j = 4;
+				break;
 			}
 			j++;
 		}
