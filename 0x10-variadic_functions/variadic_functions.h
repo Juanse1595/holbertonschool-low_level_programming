@@ -1,5 +1,12 @@
 #ifndef VAR_H
 #define VAR_H
+#include <stdarg.h>
+
+typedef struct t
+{
+	char *a;
+	void (*funp)(va_list);
+} type_t;
 
 int _putchar(char c);
 int sum_them_all(const unsigned int n, ...);
