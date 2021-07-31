@@ -3,7 +3,6 @@
 /**
   * print - print before main
   */
-
 void print(void) __attribute__ ((constructor));
 void print(void)
 {
