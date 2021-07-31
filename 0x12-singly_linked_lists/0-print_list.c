@@ -1,3 +1,4 @@
+#include "lists.h"
 /**
   * print_list - Prints all elements in list
   * @h: head pointer
@@ -7,11 +8,15 @@
 size_t print_list(const list_t *h)
 {
 	size_t nodecount = 0;
-	char *s = "(nil)";
 
 	while (h != NULL)
 	{
-
+		if (h->str == NULL)
+			printf("[0] (nil)\n");
+		else
+			printf("[%d] %s\n", h->len, h->str);
+		h = h->next;
+		nodecount++;
 	}
-	return (0);
+	return (nodecount);
 }
