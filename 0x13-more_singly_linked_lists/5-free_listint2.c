@@ -13,4 +13,5 @@ void free_listint2(listint_t **head)
 	/* recursive case */
 	free_listint2(&(*head)->next);
 	free(*head);
+	*head = NULL;
 }
