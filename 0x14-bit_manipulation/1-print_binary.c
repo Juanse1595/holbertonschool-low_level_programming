@@ -11,8 +11,9 @@ void print_binary(unsigned long int n)
 	int i;
 
 	aux = n;
-	for (i = 31; ((n >> i) & 1) == 0 && i != 0; i--)
-	{}
+	i = (sizeof(unsigned long int) * 8) - 1;
+	while (((n >> i) & 1) == 0 && i != 0)
+		i--;
 	while (i >= 0)
 	{
 		aux = (aux >> i) & 1;
