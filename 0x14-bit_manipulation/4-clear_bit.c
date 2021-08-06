@@ -14,22 +14,18 @@ int clear_bit(unsigned long int *n, unsigned int index)
 	if (n == NULL || index > ((sizeof(unsigned long int) * 8) - 1))
 		return (-1);
 	base = 1;
-	if (index == 0)
+	if (((*n >> index) & 1) == 1)
 	{
-		if (*n >= 1)
+		if (index == 0)
 		{
 			*n -= 1;
 			return (1);
 		}
-		return (-1);
-	}
-	while (index > 0)
-	{
-		base *= 2;
-		index--;
-	}
-	if (*n >= base)
-	{
+		while (index > 0)
+		{
+			base *= 2;
+			index--;
+		}
 		*n -= base;
 		return (1);
 	}
