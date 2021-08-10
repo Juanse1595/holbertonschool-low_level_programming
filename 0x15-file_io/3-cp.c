@@ -64,4 +64,4 @@ int main(int argc, char *argv[])
 	if (cl2 < 0)
 		error_check(100, NULL, fd2);
 	return (0);
-
+}
