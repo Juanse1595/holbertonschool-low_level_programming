@@ -1,48 +1,43 @@
-#include <stdlib.h>
+#include "main.h"
 
 /**
- * _realloc - imitates realloc
- * @ptr: pointer to the memory
- * @old_size: old size of the memory
- * @new_size: new size of the memory
- * Return: pointer
+ * *_realloc - reallocates a memory block using malloc and free
+ * @ptr: pointer to the memory previusly allocated
+ * @old_size: the size of ptr
+ * @new_size: the size of the required pointer
+ * Return: pointer with memory allocated
+ *
  */
 
 void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 {
-	void *p;
-	unsigned int i;
+	char *pointer, *bu = ptr;
+	unsigned int i;/**/
 
-	p = NULL;
+	/*aux = old_size;
+	if (new_size > aux)
+		aux = old_size;*/
 
-	p = malloc(new_size);
-	if (p == NULL)
-		return (NULL);
-
-	if (new_size < old_size)
+	if (!ptr)
 	{
-		for (i = 0; i < new_size; i++)
-			p[i] = ptr[i];
+		pointer = malloc(new_size);
+		return (pointer);
 	}
-	else
-	{
-		for (i = 0; i < old_size; i++)
-			p[i] = ptr[i];
-	}
-
-	if (ptr == NULL)
-	{
-		ptr = malloc(new_size);
-		return (ptr);
-	}
-
-	if (new_size == 0 && ptr != NULL)
+	if (new_size == 0)
 	{
 		free(ptr);
-		return (ptr);
+		return (NULL);
 	}
-
 	if (new_size == old_size)
 		return (ptr);
-	return (p);
+	pointer = malloc(new_size);
+	if (!pointer)
+		return (NULL);
+
+
+	for (i = 0; i < old_size; i++)/**/
+		pointer[i] = bu[i];
+	free(ptr);
+
+	return (pointer);
 }
