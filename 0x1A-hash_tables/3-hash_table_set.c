@@ -34,8 +34,8 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 
 	/* in case the key is unique */
 	new_node = malloc(sizeof(hash_node_t));
-    if (new_node == NULL)
-        return (0);
+	if (new_node == NULL)
+		return (0);
 	new_node->key = cp_key;
 	new_node->value = cp_value;
 	new_node->next = ht->array[index];
