@@ -19,7 +19,7 @@ int linear_search(int *array, size_t size, int value)
 		if (array[idx] == value)
 			return (idx);
 	}
-    /* if value not found */
+	/* if value not found */
 	return (-1);
 }
 
@@ -30,13 +30,14 @@ int linear_search(int *array, size_t size, int value)
  */
 void print_array(int *array, size_t size)
 {
-    size_t idx;
-    printf("Searching in array: ");
-    for (idx = 0; idx < size - 1; idx++)
-    {
-        printf("%d, ", array[idx]);
-    }
-    printf("%d\n", array[idx]);
+	size_t idx;
+
+	printf("Searching in array: ");
+	for (idx = 0; idx < size - 1; idx++)
+	{
+		printf("%d, ", array[idx]);
+	}
+	printf("%d\n", array[idx]);
 }
 
 /**
@@ -49,22 +50,22 @@ void print_array(int *array, size_t size)
  */
 int binary_search_2(int *array, size_t size, int value)
 {
-    size_t idx;
-    
-    if (size % 2 == 0)
-        idx = (size / 2) - 1;
-    else
-        idx = size / 2;
-    print_array(array, size);
-    if (array[idx] == value)
-        return (idx);
-    else if (size == 1)
-        return (-1);
-    else if (array[idx] > value)
-        return (binary_search_2(&array[0], (size / 2) - 1, value));
-    else if (array[idx] < value)
-        return (binary_search_2(&array[idx + 1], size / 2, value));
-    return (-1);
+	size_t idx;
+
+	if (size % 2 == 0)
+		idx = (size / 2) - 1;
+	else
+		idx = size / 2;
+	print_array(array, size);
+	if (array[idx] == value)
+		return (idx);
+	else if (size == 1)
+		return (-1);
+	else if (array[idx] > value)
+		return (binary_search_2(&array[0], (size / 2) - 1, value));
+	else if (array[idx] < value)
+		return (binary_search_2(&array[idx + 1], size / 2, value));
+	return (-1);
 }
 
 /**
@@ -77,11 +78,12 @@ int binary_search_2(int *array, size_t size, int value)
  */
 int binary_search(int *array, size_t size, int value)
 {
-    int result;
-    if (array == NULL)
-        return (-1);
-    result = binary_search_2(array, size, value);
-    if (result == -1)
-        return (-1);
-    return linear_search(array, size, value);
+	int result;
+
+	if (array == NULL)
+		return (-1);
+	result = binary_search_2(array, size, value);
+	if (result == -1)
+		return (-1);
+	return (linear_search(array, size, value));
 }
